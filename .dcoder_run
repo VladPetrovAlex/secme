@@ -2,17 +2,17 @@ make
 make run
 make clean
 
-#rm -f .git/index
-#git reset
+# rm -f .git/index
+# git reset
 
-#git status
+# git status
 
-#git config --global user.email vlad.secme@gmail.com
-#git config --global user.name VladPetrovAlex
-#git remote add origin https://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@github.com/VladPetrovAlex/secme.git
-#git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+# git config --global user.email vlad.secme@gmail.com
+# git config --global user.name VladPetrovAlex
+# git remote add origin https://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@github.com/VladPetrovAlex/secme.git
+# git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
-git add .
+ git add .
 
-git commit -m "Autocommit per build..."
-git push
+ git commit -m "commit..."
+ git push
