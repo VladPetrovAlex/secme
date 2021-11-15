@@ -9,9 +9,10 @@ make clean
 
 #git config --global user.email vlad.secme@gmail.com
 #git config --global user.name VladPetrovAlex
-#git remote add origin https://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@github.com/VladPetrovAlex/secme.git
-#git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+#git remote add origin https://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@github.com/VladPetrovAlex/secme.git
+#git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 git add .
-#git commit -m "Autocommit per build..."
-#git push
+
+git commit -m "Autocommit per build..."
+git push
