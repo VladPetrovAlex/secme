@@ -10,8 +10,7 @@ make clean
 #git config --global user.email vlad.secme@gmail.com
 #git config --global user.name VladPetrovAlex
 #git remote add origin https://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@github.com/VladPetrovAlex/secme.git
-
-git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+#git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 git add .
 
