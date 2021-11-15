@@ -6,13 +6,13 @@ make clean
 # git reset
 
 # git status
-
+# git config credential.helper
 # git config --global user.email vlad.secme@gmail.com
 # git config --global user.name VladPetrovAlex
 # git remote add origin https://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@github.com/VladPetrovAlex/secme.git
 # git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
- git add .
-
- git commit -m "commit..."
- git push
+# git status
+git add .
+git commit -m "commit..."
+git push
