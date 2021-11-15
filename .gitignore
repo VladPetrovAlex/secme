@@ -43,7 +43,7 @@
 *.pdb
 
 # Dcoder files
-.dcoder*
+*.dcoder_run
 
 # Kernel Module Compile Results
 *.mod*
