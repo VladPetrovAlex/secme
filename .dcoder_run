@@ -1,0 +1,9 @@
+# write commands to install modules/lib and run your project, one in each line.
+# gcc commands are available along with other basic linux commands.
+# command to compile the project, replace ${FILE_NAME} with your main file
+make
+make run
+make clean
+git add .
+
+# command to run, change name with executable file genrated from above command
