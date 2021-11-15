@@ -9,7 +9,7 @@ git reset
 
 git config --global user.email vlad.secme@gmail.com
 git config --global user.name VladPetrovAlex
-#git remote add origin https://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@github.com/{username}/secme.git
+git remote add origin https://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@github.com/VladPetrovAlex/secme.git
 git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 git add .
