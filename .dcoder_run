@@ -1,6 +1,3 @@
-# write commands to install modules/lib and run your project, one in each line.
-# gcc commands are available along with other basic linux commands.
-# command to compile the project, replace ${FILE_NAME} with your main file
 make
 make run
 make clean
@@ -10,13 +7,11 @@ make clean
 
 #git status
 
-git config --global user.email vlad.secme@gmail.com
-git config --global user.name VladPetrovAlex
-git remote add origin https://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@github.com/{username}/secme.git
-git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+#git config --global user.email vlad.secme@gmail.com
+#git config --global user.name VladPetrovAlex
+#git remote add origin https://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@github.com/{username}/secme.git
+#git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 git add .
-git commit -m "Edit gitignore"
+git commit -m "Autocommit per build..."
 git push
-
-# command to run, change name with executable file genrated from above command
