@@ -15,4 +15,4 @@ __attribute__((warn_unused_result))
 extern ssize_t secme_recvfrom(int fd, char *buf, size_t size, struct sockaddr *addr, socklen_t *addrlen);
 
 __attribute__((warn_unused_result))
-int secme_epoll_wait(int epfd, struct epoll_event *events, size_t eventmax, int timeout);
+extern int secme_epoll_wait(int epfd, struct epoll_event *events, size_t eventmax, int timeout);
