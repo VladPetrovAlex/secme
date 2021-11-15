@@ -42,6 +42,9 @@
 *.idb
 *.pdb
 
+# Dcoder files
+.dcoder*
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd

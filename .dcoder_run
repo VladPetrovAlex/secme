@@ -4,6 +4,19 @@
 make
 make run
 make clean
+
+#rm -f .git/index
+#git reset
+
+#git status
+
+git config --global user.email vlad.secme@gmail.com
+git config --global user.name VladPetrovAlex
+git remote add origin https://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@github.com/{username}/secme.git
+git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+
 git add .
+git commit -m "Edit gitignore"
+git push
 
 # command to run, change name with executable file genrated from above command
