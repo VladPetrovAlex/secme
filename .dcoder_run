@@ -1,24 +1,22 @@
 #!/bin/sh
-
-make clean
-
 # rm -f .git/index
 # git reset
 
 # git status
 # git config credential.helper
-# git config --global user.email vlad.secme@gmail.com
-# git config --global user.name VladPetrovAlex
+git config --global user.email vlad.secme@gmail.com
+git config --global user.name VladPetrovAlex
 # git remote add origin https://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@github.com/VladPetrovAlex/secme.git
-# git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
+git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 compile=1
 run=0
 commit=1
-push=1
+push=0
 
 if [ $compile != 0 ]
 then
+   make clean
    make
 fi
 
