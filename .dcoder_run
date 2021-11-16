@@ -1,3 +1,4 @@
+#!/bin/sh
 
 make clean
 
@@ -11,29 +12,29 @@ make clean
 # git remote add origin https://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@github.com/VladPetrovAlex/secme.git
 # git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
-compile = 1
-run = 0
-commit = 0
-push = 0
+compile=1
+run=0
+commit=1
+push=0
 
-if [ compile ]
+if [ $compile != 0 ]
 then
    make
 fi
 
-if [ run ]
+if [ $run != 0 ]
 then
    make run
 fi
 
-if [ commit ]
+if [ $commit != 0 ]
 then
    make clean
    git add .
    git commit -m "commit..."
 fi
 
-if [ push ]
+if [ $push != 0 ]
 then
    git push
 fi
