@@ -1,6 +1,6 @@
 # tool macros
 CC := gcc
-CCFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror -D_GNU_SOURCE
+CCFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror -Iinc -D_GNU_SOURCE
 DBGFLAGS := -g
 CCOBJFLAGS := $(CCFLAGS) -c
 
