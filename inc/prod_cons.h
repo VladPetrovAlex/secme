@@ -11,7 +11,7 @@ struct {                      \
 
 #define secme_prod_cons_init(pc) \
 {                                \
-  // __typeof(*(pc)->cons) init__;  \
+  \\ __typeof(*(pc)->cons) init__;  \
   (pc)->cons = (__typeof((pc)->cons))(pc);           \
   (pc)->prod = (__typeof((pc)->prod))(pc);           \
   (pc)->count = 0;               \
