@@ -44,6 +44,7 @@
 
 # Dcoder files
 *.dcoder_run
+.dcoder_run
 
 # Kernel Module Compile Results
 *.mod*

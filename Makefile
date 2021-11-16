@@ -1,6 +1,12 @@
 # tool macros
 CC := gcc
-CCFLAGS := -std=c11 -Wall -Wextra -Wpedantic -Werror -Iinc -D_GNU_SOURCE
+CCFLAGS := -std=c11 \
+           -Wall \
+           -Wextra \
+           -Werror \
+           -Iinc \
+           -D_GNU_SOURCE
+
 DBGFLAGS := -g
 CCOBJFLAGS := $(CCFLAGS) -c
 
@@ -54,5 +60,3 @@ clean:; @echo CLEAN $(CLEAN_LIST); rm -f $(CLEAN_LIST)
 
 .PHONY: distclean
 distclean:; @echo CLEAN $(DISTCLEAN_LIST); rm -f $(DISTCLEAN_LIST)
-
-run: all; $(BIN_PATH)/$(TARGET_NAME)
