@@ -15,7 +15,7 @@ make clean
 compile=1
 run=0
 commit=1
-push=0
+push=1
 
 if [ $compile != 0 ]
 then
@@ -36,6 +36,9 @@ fi
 
 if [ $push != 0 ]
 then
+   make clean
+   git add .
+   git commit -m "commit..."
    git push
 fi
 
