@@ -43,7 +43,7 @@ void *consumer(void *arg)
 {
   size_t count = 0;
   
-  while(!atomic_load(&complete))
+  while(atomic_load(&complete) == false)
   {
     if(secme_prod_cons_cons(&gInts) != NULL)
     {
