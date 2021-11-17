@@ -10,9 +10,9 @@ git config --global user.name VladPetrovAlex
 git remote set-url origin https://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@github.com/VladPetrovAlex/secme.git
 
 compile=1
-run=0
-commit=0
-push=1
+run=1
+commit=1
+push=0
 
 if [ $compile != 0 ]
 then
