@@ -32,7 +32,7 @@ int main()
   for(size_t i = 0; i < size; ++i)
   {
     secme_prod_cons_prod(&pc, &prod[i]);
-    printf("%d\n", secme_prod_cons_cons(&pc)->v);
+    printf("%d (%u)\n", secme_prod_cons_cons(&pc)->v, secme_prod_cons_count(&pc));
   }
   
   (void)cons;
