@@ -18,7 +18,7 @@ atomic_bool complete = false;
 
 void *producer(void *arg)
 {
-  for(size_t i = 0; i < PROD_ROUNDS)
+  for(size_t i = 0; i < PROD_ROUNDS; ++i)
   {
     srand(time(NULL));
     int part_size = rand() % PROD_MAX;
