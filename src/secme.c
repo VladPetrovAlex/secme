@@ -2,13 +2,46 @@
 
 #include "prod_cons.h"
 
+#define PROD_ROUNDS 10
+#define PROD_MAX 1000
+
+typedef struct IntTag
+{
+  int v;
+  struct IntTag *next;
+} Int;
+
+secme_prod_cons(Int) gInts;
+atomic_bool complete = false;
+
+void *producer(void *arg)
+{
+  for(size_t i = 0; i < PROD_ROUNDS)
+  {
+    srand(time(NULL));
+    int part_size = rand() % PROD_MAX;
+    for(size_t i = 0; i < part_size; ++i)
+    {
+      Int product = { i, NULL, }
+      secme_prod_cons_prod(gInts, &product);
+    }
+    sleep(1);
+  }
+  
+  atomic_store(&complete, true);
+}
+
+void *consumer(void *arg)
+{
+  while(secme)
+}
+
 int main()
 {
-  typedef struct IntTag
-  {
-    int v;
-    struct IntTag *next;
-  } Int;
+  secme_prod_cons_init(&gInts);
+  
+  
+  
   
   Int prod[] = {
     {1, 0},
