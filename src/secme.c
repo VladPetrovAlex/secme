@@ -22,7 +22,7 @@ void *producer(void *arg)
   for(size_t i = 0; i < PROD_ROUNDS; ++i)
   {
     srand(time(NULL));
-    int part_size = rand() % PROD_MAX;
+    size_t part_size = rand() % PROD_MAX;
     for(size_t i = 0; i < part_size; ++i)
     {
       Int product = { i, NULL, }
