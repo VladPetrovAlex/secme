@@ -5,8 +5,8 @@
 
 #include "prod_cons.h"
 
-#define PROD_ROUNDS 10
-#define PROD_MAX 1000
+#define PROD_ROUNDS 10U
+#define PROD_MAX 1000U
 
 typedef struct IntTag
 {
