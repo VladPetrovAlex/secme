@@ -24,7 +24,6 @@ int main()
   };
   
   size_t size = sizeof(prod) / sizeof(prod[0]);
-  Int cons[] = { 0 };
  
   secme_prod_cons(Int) pc;
   secme_prod_cons_init(&pc);
@@ -35,7 +34,6 @@ int main()
     printf("(%lu)\n", secme_prod_cons_count(&pc));
   }
   
-  (void)cons;
   (void)prod;
   (void)pc;
 }
