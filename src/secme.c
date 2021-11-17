@@ -17,15 +17,12 @@ typedef struct IntTag
 } Int;
 
 secme_prod_cons(Int) gInts;
-atomic_bool complete = false;
+atomic_bool complete;
 
 void *producer(void *arg)
 {
-  atomic_store(&complete, false);
-  
   for(size_t i = 0; i < PROD_ROUNDS; ++i)
   {
-    srand(time(NULL));
     size_t part_size = PROD_MAX;
     for(size_t i = 0; i < part_size; ++i)
     {
@@ -42,8 +39,9 @@ void *producer(void *arg)
 void *consumer(void *arg)
 {
   size_t count = 0;
+  bool ready = atomic_load(&complete);
   
-  while(atomic_load(&complete) == false)
+  while(()ready == false))
   {
     if(secme_prod_cons_cons(&gInts) != NULL)
     {
@@ -59,7 +57,7 @@ int main()
 {
   secme_prod_cons_init(&gInts);
   pthread_t ct, pt;
-  
+  atomic_store(&complete, false);
   pthread_create(&pt, NULL, producer, NULL);
   pthread_create(&ct, NULL, consumer, NULL);
   
