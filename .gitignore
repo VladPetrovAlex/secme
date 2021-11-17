@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# Core dumps
+core.*
+
 # Object files
 *.o
 *.ko
