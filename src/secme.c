@@ -61,7 +61,6 @@ int main()
   pthread_t ct, pt;
   
   pthread_create(&pt, NULL, producer, NULL);
-  sleep(1);
   pthread_create(&ct, NULL, consumer, NULL);
   
   pthread_join(ct, NULL);
