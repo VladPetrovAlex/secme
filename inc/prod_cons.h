@@ -4,8 +4,8 @@
 
 #define secme_prod_cons(type) \
 struct {                      \
-  type *cons;                 \
-  type *prod;                 \
+  volatile type *cons;        \
+  volatile type *prod;        \
   atomic_size_t count;        \
 }
 

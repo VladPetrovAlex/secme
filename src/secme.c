@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <time.h>
+#include <pthread.h>
 
 #include "prod_cons.h"
 
 #define PROD_ROUNDS 10U
-#define PROD_MAX 1000U
+#define PROD_MAX 10U
 
 typedef struct IntTag
 {
@@ -19,57 +21,49 @@ atomic_bool complete = false;
 
 void *producer(void *arg)
 {
+  atomic_store(&complete, false);
+  
   for(size_t i = 0; i < PROD_ROUNDS; ++i)
   {
     srand(time(NULL));
-    size_t part_size = rand() % PROD_MAX;
+    size_t part_size = PROD_MAX;
     for(size_t i = 0; i < part_size; ++i)
     {
-      Int product = { i, NULL, }
-      secme_prod_cons_prod(gInts, &product);
+      Int product = { i, NULL, };
+      secme_prod_cons_prod(&gInts, &product);
     }
-    sleep(1);
   }
   
   atomic_store(&complete, true);
+  pthread_exit((void *)0);
+  (void)arg;
 }
 
 void *consumer(void *arg)
 {
-  while(secme)
+  size_t count = 0;
+  
+  while(!atomic_load(&complete))
+  {
+    secme_prod_cons_cons(&gInts);
+    ++count;
+  }
+  
+  printf("%lu\n", count);
+  pthread_exit(arg);
 }
 
 int main()
 {
   secme_prod_cons_init(&gInts);
+  pthread_t ct, pt;
   
+  pthread_create(&pt, NULL, producer, NULL);
+  sleep(1);
+  pthread_create(&ct, NULL, consumer, NULL);
   
+  pthread_join(ct, NULL);
+  pthread_join(pt, NULL);
   
-  
-  Int prod[] = {
-    {1, 0},
-    {2, 0},
-    {3, 0},
-    {4, 0},
-    {5, 0},
-    {6, 0},
-    {7, 0},
-    {8, 0},
-    {9, 0},
-    {10, 0},
-  };
-  
-  size_t size = sizeof(prod) / sizeof(prod[0]);
- 
-  secme_prod_cons(Int) pc;
-  secme_prod_cons_init(&pc);
-  
-  for(size_t i = 0; i < size; ++i)
-  {
-    secme_prod_cons_prod(&pc, &prod[i]);
-    printf("(%lu)\n", secme_prod_cons_count(&pc));
-  }
-  
-  (void)prod;
-  (void)pc;
+  return 0;
 }
