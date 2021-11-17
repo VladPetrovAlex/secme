@@ -45,8 +45,10 @@ void *consumer(void *arg)
   
   while(!atomic_load(&complete))
   {
-    secme_prod_cons_cons(&gInts);
-    ++count;
+    if(secme_prod_cons_cons(&gInts) != NULL)
+    {
+      ++count;
+    }
   }
   
   printf("%lu\n", count);
