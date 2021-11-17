@@ -29,7 +29,7 @@ if [ $commit != 0 ]
 then
    make clean
    git add .
-   git commit -m "commit..."
+   git commit -m "secme_prod_cons 0.1"
 fi
 
 if [ $push != 0 ]
