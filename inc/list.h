@@ -10,6 +10,11 @@ struct list_item
     struct list_item *_Atomic next;
 };
 
+void list_init(struct list_item *list)
+{
+    list->next = list;
+}
+
 void list_push(struct list_item *_Atomic bucket, struct list_item *_Atomic item)
 {
     item->next = bucket->next;

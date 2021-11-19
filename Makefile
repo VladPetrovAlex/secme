@@ -7,7 +7,8 @@ CCFLAGS := -std=c11 \
            -Iinc \
            -pthread \
            -g \
-           -D_GNU_SOURCE
+           -D_GNU_SOURCE \
+           -D_THREAD_SAFE
 
 DBGFLAGS := -g
 CCOBJFLAGS := $(CCFLAGS) -c
