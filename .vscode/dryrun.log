@@ -1,0 +1,5 @@
+make bin/secme --dry-run --keep-going --print-directory
+make: Entering directory '/workspace/secme'
+make: 'bin/secme' is up to date.
+make: Leaving directory '/workspace/secme'
+ 

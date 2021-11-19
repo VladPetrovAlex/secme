@@ -1,0 +1,10 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/workspace/secme/bin",
+            "binaryPath": "/workspace/secme/bin/secme",
+            "binaryArgs": []
+        }
+    ]
+}
