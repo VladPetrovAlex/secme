@@ -4,36 +4,37 @@
 
 #define secme_prod_cons(type) \
 struct {                      \
-  volatile type *cons;        \
-  volatile type *prod;        \
-  atomic_size_t count;        \
+  atomic(type *) first;       \
+  atomic(type *) last;        \
 }
 
-#define secme_prod_cons_init(pc)           \
-{                                          \
-  (pc)->cons = (__typeof((pc)->cons))(pc); \
-  (pc)->prod = (__typeof((pc)->prod))(pc); \
-  (pc)->count = 0;                         \
+#define secme_prod_cons_init(pc)             \
+{                                            \
+  (pc)->first = (__typeof((pc)->first))(pc); \
+  (pc)->last = (__typeof((pc)->last))(pc);   \
 }
 
 #define secme_prod_cons_prod(pc, p)    \
 {                                      \
-  (pc)->prod = (pc)->prod->next = (p); \
-  atomic_fetch_add(&(pc)->count, 1);   \
+  
 }
 
-#define secme_prod_cons_count(pc) \
-  (atomic_load(&(pc)->count))
-
 #define secme_prod_cons_empty(pc) \
-  (0 == secme_prod_cons_count((pc)))
+  (atomic_load((pc)->cons == ))
 
 #define secme_prod_cons_cons(pc)       \
 ({                                     \
   __typeof((pc)->cons) res__ = NULL;   \
   if(!secme_prod_cons_empty((pc))) {   \
-    res__ = (pc)->cons->next;          \
-    atomic_fetch_sub(&(pc)->count, 1); \
+    secme_prod_cons_cons_impl((pc))    \
   }                                    \
+  res__;                               \
+})
+
+#define secme_prod_cons_cons_impl(pc)  \
+({                                     \
+  __typeof((pc)->cons) res__ = NULL;   \
+  res__ = (pc)->cons->next;            \
+  atomic_fetch_sub(&(pc)->count, 1);   \
   res__;                               \
 })
