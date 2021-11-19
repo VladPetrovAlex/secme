@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Nov 19 13:26:21 2021
+# Make data base, printed on Fri Nov 19 13:51:31 2021
 
 # Variables
 
@@ -82,7 +82,7 @@ MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /ide/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/workspace/.cargo/bin:/workspace/.pip-modules/bin:/workspace/.rvm/bin:/home/gitpod/.sdkman/candidates/maven/current/bin:/home/gitpod/.sdkman/candidates/java/current/bin:/home/gitpod/.sdkman/candidates/gradle/current/bin:/home/gitpod/.rvm/gems/ruby-2.7.4/bin:/home/gitpod/.rvm/gems/ruby-2.7.4@global/bin:/home/gitpod/.rvm/rubies/ruby-2.7.4/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/workspace/.cargo/bin:/workspace/.pip-modules/bin:/workspace/.rvm/bin:/ide/bin:/workspace/.cargo/bin:/workspace/.rvm/bin:/workspace/.pip-modules/bin:/home/gitpod/.pyenv/bin:/home/gitpod/.pyenv/shims:/workspace/go/bin:/home/gitpod/go/bin:/home/gitpod/go-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.cargo/bin:/usr/games:/usr/games:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.rvm/bin:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.nvm/versions/node/v16.13.0/bin
 # environment
-GITPOD_WORKSPACE_ID = lime-scorpion-rsehnrjy
+GITPOD_WORKSPACE_ID = cyan-echidna-xz0mjf7f
 # environment
 GITPOD_INTERVAL = 30000
 # environment
@@ -96,7 +96,6 @@ GITPOD_ANALYTICS_SEGMENT_KEY = bUY8IRdJ42KjLOBS9LoIHMYFBD8rSzjU
 # environment
 SDKMAN_DIR = /home/gitpod/.sdkman
 # makefile (from 'Makefile', line 18)
- 
 SRC_PATH := src
 # environment
 SDKMAN_CANDIDATES_API = https://api.sdkman.io/2
@@ -109,8 +108,9 @@ SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-35c696b3-635c-40a6-b606-15c27c0b2888.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e8d7cd5f-9124-4d2b-833a-db9431943a1b.sock
 # default
+ 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = 
@@ -145,14 +145,13 @@ PYENV_SHELL = bash
 # environment
 HOME = /home/gitpod
 # environment
- 
 THEIA_WEBVIEW_EXTERNAL_ENDPOINT = webview-{{hostname}}
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = LuIydgrMrjE3C9yT4BIMCugxuN9yQ_m4
+GITPOD_CLI_APITOKEN = 5WhwO8iJekhcdZihAjSbT3jVPfv9GnQ0
 # automatic
 +F = $(notdir $+)
 # environment
@@ -160,7 +159,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = ws-ca33e96a-af75-4f79-a9bd-1c8d506ea96c
+HOSTNAME = ws-a71a08bf-7ba9-4d7f-8997-4b560f14de93
 # environment
 GRADLE_USER_HOME = /workspace/.gradle/
 # environment
@@ -181,10 +180,10 @@ SHLVL = 0
 CC := gcc
 # makefile (from 'Makefile', line 22)
 TARGET_NAME := secme
+ 
 # environment
 GITPOD_GIT_USER_NAME = VladPetrovAlex
 # environment
- 
 JAVA_HOME = /home/gitpod/.sdkman/candidates/java/current
 # makefile (from 'Makefile', line 27)
 TARGET_DEBUG := debug/secme
@@ -216,7 +215,6 @@ PIP_USER = yes
 THEIA_RATELIMIT_LOG = 50
 # environment
 THEIA_MINI_BROWSER_HOST_PATTERN = browser-{{hostname}}
- 
 # environment
 TRIGGER_BREW_REBUILD = 5
 # environment
@@ -243,13 +241,13 @@ NVM_DIR = /home/gitpod/.nvm
 +D = $(patsubst %/,%,$(dir $+))
 # environment
 rvm_user_install_flag = 1
- 
 # environment
 BROWSER = /ide/bin/helpers/browser.sh
 # environment
+ 
 GITPOD_MEMORY = 2576
 # environment
-GITPOD_TASKS = [{"init":"make"}]
+GITPOD_TASKS = [{"init":"make clean; make"}]
 # default
 MAKEFILES := 
 # environment
@@ -273,10 +271,9 @@ EDITOR = /ide/bin/gitpod-code
 # makefile (from 'Makefile', line 19)
 DBG_PATH := debug
 # environment
- 
 LC_ALL = C
 # environment
-GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"VladPetrovAlex/secme - main","ref":"main","refType":"branch","revision":"40e47c11c7ff30f019c9adafcfc223f39624ae2c","repository":{"cloneUrl":"https://github.com/VladPetrovAlex/secme.git","host":"github.com","name":"secme","owner":"VladPetrovAlex","private":false},"normalizedContextURL":"https://github.com/VladPetrovAlex/secme","prebuildWorkspaceId":"5d22abf1-18a9-4c5c-8b1f-57fd542a49b8","wasPrebuilt":true}
+GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"VladPetrovAlex/secme - main","ref":"main","refType":"branch","revision":"345e72ce47493fd961b56c20e38583c6e62ea237","repository":{"cloneUrl":"https://github.com/VladPetrovAlex/secme.git","host":"github.com","name":"secme","owner":"VladPetrovAlex","private":false},"normalizedContextURL":"https://github.com/VladPetrovAlex/secme","prebuildWorkspaceId":"ccd258b6-dcf5-4883-891e-957360b6b304","wasPrebuilt":true}
 # makefile (from 'Makefile', line 12)
 DBGFLAGS := -g
 # environment
@@ -295,15 +292,15 @@ PYENV_VIRTUALENV_INIT = 1
 NGINX_DOCROOT_IN_REPO = public
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+ 
 # environment
 VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /ide/remote/node_modules
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = ca33e96a-af75-4f79-a9bd-1c8d506ea96c
- 
+GITPOD_INSTANCE_ID = a71a08bf-7ba9-4d7f-8997-4b560f14de93
 # environment
-GITPOD_WORKSPACE_URL = https://lime-scorpion-rsehnrjy.ws-eu18.gitpod.io
+GITPOD_WORKSPACE_URL = https://cyan-echidna-xz0mjf7f.ws-eu18.gitpod.io
 # default
 .RECIPEPREFIX := 
 # makefile (from 'Makefile', line 32)
@@ -321,8 +318,7 @@ DISTCLEAN_LIST := obj/secme.o obj/libcwrap.o debug/secme.o debug/libcwrap.o
 # environment
 MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.4
 # variable set hash-table stats:
- 
-# Load=151/1024=15%, Rehash=0, Collisions=17/207=8%
+# Load=151/1024=15%, Rehash=0, Collisions=16/202=8%
 
 # Pattern-specific Variable Values
 
@@ -330,8 +326,8 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.4
 
 # Directories
 
-# . (device 2346, inode 1342238792): 14 files, no impossibilities.
-# src (device 2346, inode 4160761863): 4 files, no impossibilities.
+# . (device 2346, inode 4026765371): 14 files, no impossibilities.
+# src (device 2346, inode 2282323996): 4 files, no impossibilities.
 
 # 18 files, no impossibilities in 2 directories.
 
@@ -342,6 +338,7 @@ obj/%.o: src/%.c*
 	 $(CC) $(CCOBJFLAGS) -o $@ $<
 
 debug/%.o: src/%.c*
+ 
 #  recipe to execute (from 'Makefile', line 47):
 	 $(CC) $(CCOBJFLAGS) $(DBGFLAGS) -o $@ $<
 
@@ -355,10 +352,14 @@ all: bin/secme
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
- 
+#  Successfully updated.
+
+# Not a target:
+src/libcwrap.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-19 13:51:22.848491323
+#  File has been updated.
+#  Successfully updated.
 
 .PHONY: makedir all debug clean distclean
 #  Implicit rule search has not been done.
@@ -375,19 +376,16 @@ distclean:
 
 bin/secme: obj/secme.o obj/libcwrap.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-19 13:26:11.487683811
+#  Last modified 2021-11-19 13:51:24.032570552
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 45):
 	 $(CC) $(CCFLAGS) -o $@ $(OBJ)
 
 # Not a target:
 Makefile:
- 
 #  Implicit rule search has been done.
-#  Last modified 2021-11-19 13:26:11.483683569
+#  Last modified 2021-11-19 13:51:22.848491323
 #  File has been updated.
 #  Successfully updated.
 
@@ -403,13 +401,13 @@ debug/secme: debug/secme.o debug/libcwrap.o
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 48):
 	 $(CC) $(CCFLAGS) $(DBGFLAGS) $(OBJ_DEBUG) -o $@
+ 
 
 default: makedir all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 debug/secme.o:
 #  Implicit rule search has not been done.
@@ -435,7 +433,6 @@ makedir:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 52):
 	 @mkdir -p $(BIN_PATH) $(OBJ_PATH) $(DBG_PATH)
- 
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -446,61 +443,46 @@ clean:
 	 @echo CLEAN $(CLEAN_LIST); rm -f $(CLEAN_LIST)
 
 obj/secme.o: src/secme.c
+ 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'secme'
-#  File does not exist.
+#  Last modified 2021-11-19 13:51:23.96856627
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/secme.o
-# automatic
-# % := 
-# automatic
-# * := secme
-# automatic
-# + := src/secme.c
- 
-# automatic
-# | := 
-# automatic
-# < := src/secme.c
-# automatic
-# ^ := src/secme.c
-# automatic
-# ? := src/secme.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 46):
+	 $(CC) $(CCOBJFLAGS) -o $@ $<
+
+obj/libcwrap.o: src/libcwrap.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'libcwrap'
+#  Last modified 2021-11-19 13:51:24.004568679
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 46):
 	 $(CC) $(CCOBJFLAGS) -o $@ $<
 
 # Not a target:
-obj/libcwrap.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 src/secme.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2021-11-19 13:26:11.487683811
+#  Last modified 2021-11-19 13:51:22.848491323
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/52=0%
+# Load=18/1024=2%, Rehash=0, Collisions=0/56=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 37 / storage = 332 B / avg = 8 B
-# current buf: size = 8162 B / used = 332 B / count = 37 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 39 / storage = 356 B / avg = 9 B
+# current buf: size = 8162 B / used = 356 B / count = 39 / avg = 9 B
 
-# strcache performance: lookups = 74 / hit rate = 50%
+# strcache performance: lookups = 77 / hit rate = 49%
 # hash-table stats:
-# Load=37/8192=0%, Rehash=0, Collisions=2/74=3%
-# Finished Make data base on Fri Nov 19 13:26:21 2021
+ 
+# Load=39/8192=0%, Rehash=0, Collisions=2/77=3%
+# Finished Make data base on Fri Nov 19 13:51:31 2021
 
  
