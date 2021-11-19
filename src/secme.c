@@ -1,53 +1,61 @@
-#include <stdio.h>
 #include <pthread.h>
-#include <stdbool.h>
-#include <stdlib.h>
+#include <stdatomic.h>
 #include <unistd.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
 
-#include "list.h"
+#include "queue.h"
 #include "session.h"
 
-atomic_bool done = false;
+#define SESSION_COUNT 10
+atomic_bool ready = false;
 
-void *producer(void *arg)
-{
-  struct secme_session *_Atomic sessions = arg;
-  printf("d: %ld\n", (size_t)sessions);
+void *pf(void *arg)
+{ 
+  struct secme_queue_item *queue = arg;
+  struct secme_session *sessions = malloc(sizeof(*sessions) * SESSION_COUNT);
   
-  for(size_t i = 1; i < 11; ++i)
+  size_t i = 0;
+  for(struct secme_session *session = sessions, *end = session + SESSION_COUNT; session != end; ++session)
   {
-    struct secme_session *_Atomic session = (struct secme_session *)malloc(sizeof(struct secme_session));
-    secme_list_push(sessions, session);
-    printf("d: %ld\n", (size_t)sessions);
+    session->module = ++i;
+    secme_queue_push(queue, &session->item);   
+  }
+  
+  atomic_store(&ready, true);
+  pthread_exit((void *)0);
+}
+
+void *cf(void *arg)
+{
+  struct secme_queue_item *queue = arg;
+
+  while(!atomic_load(&ready))
+  {
+    printf(".");
   }
 
-  atomic_store(&done, true);
+  
+  printf("%ld", container_of(queue, struct secme_session, item)->module);
+  
+
+  atomic_store(&ready, false);
   pthread_exit((void *)0);
 }
 
-void *consumer(void *arg)
+int main()
 {
-  struct secme_session *_Atomic sessions = arg;
-  // printf("c: %p\n", sessions);
+  struct secme_queue_item sessions;
+  secme_queue_init(&sessions);
+
+  pthread_t p;
+  pthread_t c;
+
+  pthread_create(&c, NULL, cf, &sessions);
+  pthread_create(&p, NULL, pf, &sessions);
   
-  secme_list_pop(sessions);
-  atomic_store(&done, false);
-  (void)arg;
-  pthread_exit((void *)0);
-}
-
-int main(void)
-{
-  secme_list(struct secme_session) *_Atomic sessions = (__typeof(sessions))malloc(sizeof(*sessions));
-  
-  pthread_t t1;
-  pthread_t t2;
-  pthread_create(&t1, NULL, producer, sessions);
-  sleep(2);
-  pthread_create(&t2, NULL, consumer, sessions);
-
-  pthread_join(t1, NULL);
-  pthread_join(t2, NULL);
-
-  return 0;
+  pthread_join(p, NULL);
+  pthread_join(c, NULL);
 }
