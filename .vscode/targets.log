@@ -6,11 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Nov 19 06:10:19 2021
+ 
+# Make data base, printed on Fri Nov 19 07:06:34 2021
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
@@ -111,6 +111,7 @@ VSCODE_LOG_STACK = false
 VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-91c9fe82-33a6-4a21-b95d-2bb1e3160dba.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+ 
 # environment
 LS_COLORS = 
 # automatic
@@ -125,7 +126,6 @@ CLEAN_LIST := bin/secme debug/secme obj/secme.o obj/libcwrap.o debug/secme.o deb
 VSCODE_PIPE_LOGGING = true
 # environment
 rvm_bin_path = /home/gitpod/.rvm/bin
- 
 # environment
 PWD = /workspace/secme
 # default
@@ -133,7 +133,7 @@ PWD = /workspace/secme
 # environment
 GEM_HOME = /workspace/.rvm
 # makefile (from 'Makefile', line 13)
-CCOBJFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g3 -D_GNU_SOURCE -c
+CCOBJFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -c
 # environment
 MANPATH = :/home/linuxbrew/.linuxbrew/share/man
 # environment
@@ -191,12 +191,11 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = gitpod
 # makefile
- 
 .DEFAULT_GOAL := default
 # environment
 GITPOD_EXTERNAL_EXTENSIONS = []
 # makefile (from 'Makefile', line 3)
-CCFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g3 -D_GNU_SOURCE
+CCFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE
 # environment
 GOROOT = /home/gitpod/go
 # environment
@@ -204,6 +203,7 @@ GITPOD_IDE_ALIAS = code
 # environment
 rvm_version = 1.29.12 (latest)
 # makefile (from 'Makefile', line 17)
+ 
 OBJ_PATH := obj
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -235,7 +235,6 @@ MAKEFLAGS = pqrR
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
- 
 # environment
 NVM_DIR = /home/gitpod/.nvm
 # automatic
@@ -282,6 +281,7 @@ JAVA_TOOL_OPTIONS = -Xmx2576m
 ^F = $(notdir $^)
 # environment
 rvm_prefix = /home/gitpod
+ 
 # default
 SUFFIXES := 
 # environment
@@ -302,7 +302,6 @@ GITPOD_INSTANCE_ID = 2d99051a-63ed-48e6-8adf-c9a446d42016
 GITPOD_WORKSPACE_URL = https://rose-fox-dumjmxu0.ws-eu18.gitpod.io
 # default
 .RECIPEPREFIX := 
- 
 # makefile (from 'Makefile', line 32)
 OBJ_DEBUG := debug/secme.o debug/libcwrap.o
 # environment
@@ -318,13 +317,14 @@ DISTCLEAN_LIST := obj/secme.o obj/libcwrap.o debug/secme.o debug/libcwrap.o
 # environment
 MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.4
 # variable set hash-table stats:
-# Load=151/1024=15%, Rehash=0, Collisions=16/202=8%
+# Load=151/1024=15%, Rehash=0, Collisions=17/207=8%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
+ 
 
 # . (device 2346, inode 1879050267): 14 files, no impossibilities.
 # src (device 2346, inode 643730): 4 files, no impossibilities.
@@ -351,18 +351,12 @@ all: bin/secme
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/libcwrap.c:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 05:03:46.166764963
-#  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 .PHONY: makedir all debug clean distclean
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -376,22 +370,25 @@ distclean:
 
 bin/secme: obj/secme.o obj/libcwrap.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-19 06:08:22.899528757
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'Makefile', line 45):
 	 $(CC) $(CCFLAGS) -o $@ $(OBJ)
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-19 06:09:45.616336226
+#  Last modified 2021-11-19 07:05:42.08170838
 #  File has been updated.
 #  Successfully updated.
 
 debug: debug/secme
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -440,48 +437,62 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 61):
 	 @echo CLEAN $(CLEAN_LIST); rm -f $(CLEAN_LIST)
- 
 
 obj/secme.o: src/secme.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'secme'
-#  Last modified 2021-11-19 06:08:22.875526201
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 46):
-	 $(CC) $(CCOBJFLAGS) -o $@ $<
-
-obj/libcwrap.o: src/libcwrap.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libcwrap'
-#  Last modified 2021-11-19 05:59:18.937609077
-#  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/secme.o
+# automatic
+# % := 
+# automatic
+# * := secme
+# automatic
+# + := src/secme.c
+# automatic
+# | := 
+# automatic
+# < := src/secme.c
+# automatic
+# ^ := src/secme.c
+# automatic
+# ? := src/secme.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
 #  recipe to execute (from 'Makefile', line 46):
 	 $(CC) $(CCOBJFLAGS) -o $@ $<
 
 # Not a target:
+obj/libcwrap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
 src/secme.c:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-19 06:08:17.806986516
+#  Last modified 2021-11-19 06:58:24.575127127
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/56=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/52=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 356 B / avg = 9 B
-# current buf: size = 8162 B / used = 356 B / count = 39 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 332 B / avg = 8 B
+# current buf: size = 8162 B / used = 332 B / count = 37 / avg = 8 B
 
-# strcache performance: lookups = 77 / hit rate = 49%
+# strcache performance: lookups = 74 / hit rate = 50%
 # hash-table stats:
- 
-# Load=39/8192=0%, Rehash=0, Collisions=2/77=3%
-# Finished Make data base on Fri Nov 19 06:10:19 2021
+# Load=37/8192=0%, Rehash=0, Collisions=2/74=3%
+# Finished Make data base on Fri Nov 19 07:06:34 2021
 
  

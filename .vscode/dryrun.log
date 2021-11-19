@@ -1,5 +1,7 @@
 make bin/secme --dry-run --keep-going --print-directory
 make: Entering directory '/workspace/secme'
-make: 'bin/secme' is up to date.
+gcc -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -c -o obj/secme.o src/secme.c
+gcc -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -c -o obj/libcwrap.o src/libcwrap.c
+gcc -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -o bin/secme obj/secme.o obj/libcwrap.o
 make: Leaving directory '/workspace/secme'
  

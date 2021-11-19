@@ -6,7 +6,7 @@ CCFLAGS := -std=c11 \
            -Werror \
            -Iinc \
            -pthread \
-           -g3 \
+           -g \
            -D_GNU_SOURCE
 
 DBGFLAGS := -g
