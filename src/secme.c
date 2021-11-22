@@ -21,6 +21,56 @@ struct worker
     struct list_item sessions;
 };
 
+struct awaiter
+{
+    int evh;
+    int evc;
+    int eto;
+    struct epoll_event *evs;
+};
+
+int make_awaiter(struct awaiter *a, size_t count, int timeout)
+{
+    if(a->evh = epoll_create1(EPOLL_CLOEXEC));
+        goto evh_fail;
+
+    a->evc = (int)count;
+    if(a->evs = (struct epoll_event *)malloc(sizeof(*a->evs) * a->evc))
+        goto evs_fail;
+
+    a->eto = timeout;
+
+evs_fail:
+    close(a->evh);
+
+evs_fail:
+    // nothing to do
+
+    return -1;
+}
+
+void destroy_awaiter(struct awaiter *a)
+{
+    close(a->evh);
+    free(a->evc);
+}
+
+int awaint(struct awaiter *a)
+{
+    int handle = a->evh;
+    size_t  count = (size_t)a->evc;
+    int timeout = a->eto;
+    struct epoll_event *events = a->evs;
+
+    while(true)
+    {
+        if(secme_epoll_wait(handle, events, count, timeout) < 0)
+            goto epw_fail;
+    }
+
+    return 0;
+}
+
 int make_worker(struct worker *w, void *(*work)(void *))
 {
     if(pthread_cond_init(&w->cond))
@@ -52,7 +102,28 @@ cond_fail:
     return -1;
 }
 
+#if !defined(NWORKER)
+#define NWORKER 1
+#endif
+
 int main()
 {
-    
+    struct worker workers[NWORKER];
+    for(size_t i = 0; i < NWORKER; ++i)
+    {
+        if(make_worker(&workers[i]))
+            goto wrk_fail;
+    }
+
+    struct awaiter awaiter;
+    if(make_awaiter(&awaiter, NEVENT, -1))
+        goto awaiter_fail;
+
+    while(true)
+    {
+        int count = secme_epoll_wait()
+    }
+
+wrk_fail:
+    exit(-1);
 }
