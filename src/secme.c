@@ -8,88 +8,51 @@
 #include <pthread.h>
 #include <string.h>
 
+#include "libcwrap.h"
 #include "session.h"
 #include "module.h"
 
-#define SCOUNT 10
-#define NTHR 8
-
-#if 1
-
-struct wparam
+struct worker
 {
-    struct list_item sessions;
+    pthread_t thr;
     pthread_mutex_t mux;
     pthread_cond_t cond;
+    void *(*work)(void *);
+    struct list_item sessions;
 };
 
-int wparam_init(struct wparam *param)
+int make_worker(struct worker *w, void *(*work)(void *))
 {
-    list_init(&param->sessions);
-    if(pthread_mutex_init(&param->mux, NULL))
-        return -1;
+    if(pthread_cond_init(&w->cond))
+        goto cond_fail;
 
-    if(pthread_cond_init(&param->cond, NULL))
-        return -1;
+    if(pthread_mutex_init(&w->mux, NULL))
+        goto mux_fail;
+    
+    if(pthread_create(&w->thr, NULL, w->work, w))
+        goto thr_fail;
+
+    pthread_mutex_lock(&w->mux);
+    pthread_cond_wait(&w->cond, &w->mux);
+
+    list_init(&w->sessions);
+    w->work = work;
 
     return 0;
-}
 
-void wparam_destroy(struct wparam *param)
-{
-    pthread_mutex_destroy(&param->mux);
-    pthread_cond_destroy(&param->cond);
-}
+thr_fail:
+    pthread_mutex_destroy(&w->mux);
 
-#endif
+mux_fail:
+    pthread_cond_destroy(&w->cond);
 
-void *pf(void *arg)
-{
-    struct wparam *param = arg;
-    struct list_item *slist = &param->sessions;
+cond_fail:
+    // nothing to do
 
-    struct session *sessions = (struct session *)malloc(sizeof(struct session) * SCOUNT);
-    
-    for(size_t i = 0; i < SCOUNT; ++i)
-    {
-        list_push(slist, &sessions[i].item);
-    }
-
-    pthread_exit((void *)0);
-}
-
-void *cf(void *arg)
-{
-    struct wparam *param = arg;
-    struct list_item *slist = &param->sessions;
-
-    int i = 0;
-    list_foreach(slist, struct session, item) {
-        item->uid = ++i;
-        item->sid = ++i;
-        printf("(%05d:%05d)\n", item->sid, item->uid);
-    }
-
-    pthread_exit((void *)0);
-    return NULL;
+    return -1;
 }
 
 int main()
 {
-    struct wparam params[NTHR];
-    for(size_t i = 0; i < NTHR; ++i)
-    {
-        wparam_init(&params[i]);
-    }
-
-    struct list_item slist = { .next = &slist, };
     
-    pthread_t p;
-    pthread_t c;
-    
-    pthread_create(&p, NULL, pf, &params);
-    pthread_create(&c, NULL, cf, &params);
-
-    pthread_join(p, NULL);
-    pthread_join(c, NULL);
 }
