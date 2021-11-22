@@ -5,10 +5,15 @@
 
 #define container_of(p, t, m) ((t *)((char *)(p) - offsetof(t, m)))
 
+
 struct list_item
 {
     struct list_item *_Atomic next;
 };
+
+#define list_foreach(p, t, it) \
+for(t *it = container_of(p->next, t, it); \
+       it->it.next != (p)->next; it->it = *it->it.next)
 
 void list_init(struct list_item *list)
 {

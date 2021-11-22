@@ -25,9 +25,20 @@ struct wparam
 
 int wparam_init(struct wparam *param)
 {
-    list_init(param->sessions);
-    param->mux = PTHREAD_MUTEX_INITIALIZER;
-    param->cond = PTHREAD_COND_INITIALIZER;
+    list_init(&param->sessions);
+    if(pthread_mutex_init(&param->mux, NULL))
+        return -1;
+
+    if(pthread_cond_init(&param->cond, NULL))
+        return -1;
+
+    return 0;
+}
+
+void wparam_destroy(struct wparam *param)
+{
+    pthread_mutex_destroy(&param->mux);
+    pthread_cond_destroy(&param->cond);
 }
 
 #endif
@@ -53,14 +64,14 @@ void *cf(void *arg)
     struct list_item *slist = &param->sessions;
 
     int i = 0;
-    for(struct session *_Atomic s = container_of(slist->next, struct session, item); s->item.next != slist->next; s->item = *s->item.next)
-    {
-        s->uid = ++i;
-        s->sid = ++i;
-        printf("(%05d:%05d)\n", s->sid, s->uid);
+    list_foreach(slist, struct session, item) {
+        item->uid = ++i;
+        item->sid = ++i;
+        printf("(%05d:%05d)\n", item->sid, item->uid);
     }
 
     pthread_exit((void *)0);
+    return NULL;
 }
 
 int main()

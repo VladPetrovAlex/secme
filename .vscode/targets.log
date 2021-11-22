@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Fri Nov 19 13:51:31 2021
+# Make data base, printed on Mon Nov 22 06:43:39 2021
 
 # Variables
 
@@ -21,13 +20,13 @@ RUBY_VERSION = ruby-2.7.4
 GP_OPEN_EDITOR = /ide/bin/gitpod-code
 # default
 .SHELLFLAGS := -c
-# makefile (from 'Makefile', line 31)
+# makefile (from 'Makefile', line 32)
 OBJ := obj/secme.o obj/libcwrap.o
-# makefile (from 'Makefile', line 30)
+# makefile (from 'Makefile', line 31)
 SRC :=  src/secme.c src/libcwrap.c
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from 'Makefile', line 26)
+# makefile (from 'Makefile', line 27)
 TARGET := bin/secme
 # environment
 VSX_REGISTRY_URL = https://open-vsx.gitpod.io
@@ -82,7 +81,7 @@ MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /ide/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/workspace/.cargo/bin:/workspace/.pip-modules/bin:/workspace/.rvm/bin:/home/gitpod/.sdkman/candidates/maven/current/bin:/home/gitpod/.sdkman/candidates/java/current/bin:/home/gitpod/.sdkman/candidates/gradle/current/bin:/home/gitpod/.rvm/gems/ruby-2.7.4/bin:/home/gitpod/.rvm/gems/ruby-2.7.4@global/bin:/home/gitpod/.rvm/rubies/ruby-2.7.4/bin:/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims:/workspace/.cargo/bin:/workspace/.pip-modules/bin:/workspace/.rvm/bin:/ide/bin:/workspace/.cargo/bin:/workspace/.rvm/bin:/workspace/.pip-modules/bin:/home/gitpod/.pyenv/bin:/home/gitpod/.pyenv/shims:/workspace/go/bin:/home/gitpod/go/bin:/home/gitpod/go-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.cargo/bin:/usr/games:/usr/games:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.rvm/bin:/home/gitpod/.nvm/versions/node/v16.13.0/bin:/home/gitpod/.nvm/versions/node/v16.13.0/bin
 # environment
-GITPOD_WORKSPACE_ID = cyan-echidna-xz0mjf7f
+GITPOD_WORKSPACE_ID = jade-sawfish-x9oxpzl4
 # environment
 GITPOD_INTERVAL = 30000
 # environment
@@ -95,22 +94,21 @@ GITPOD_WORKSPACE_CLUSTER_HOST = ws-eu18.gitpod.io
 GITPOD_ANALYTICS_SEGMENT_KEY = bUY8IRdJ42KjLOBS9LoIHMYFBD8rSzjU
 # environment
 SDKMAN_DIR = /home/gitpod/.sdkman
-# makefile (from 'Makefile', line 18)
+# makefile (from 'Makefile', line 19)
 SRC_PATH := src
 # environment
 SDKMAN_CANDIDATES_API = https://api.sdkman.io/2
 # environment
 GOPATH = /workspace/go
-# makefile (from 'Makefile', line 16)
+# makefile (from 'Makefile', line 17)
 BIN_PATH := bin
 # environment
 SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e8d7cd5f-9124-4d2b-833a-db9431943a1b.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-457e06d0-eb24-4215-896d-6a641d8f7e4a.sock
 # default
- 
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = 
@@ -120,7 +118,7 @@ LS_COLORS =
 GP_PREVIEW_BROWSER = /ide/bin/gitpod-code --preview
 # environment
 VISUAL = /ide/bin/gitpod-code
-# makefile (from 'Makefile', line 37)
+# makefile (from 'Makefile', line 38)
 CLEAN_LIST := bin/secme debug/secme obj/secme.o obj/libcwrap.o debug/secme.o debug/libcwrap.o
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -132,8 +130,8 @@ PWD = /workspace/secme
 .LOADED := 
 # environment
 GEM_HOME = /workspace/.rvm
-# makefile (from 'Makefile', line 13)
-CCOBJFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -c
+# makefile (from 'Makefile', line 14)
+CCOBJFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -D_THREAD_SAFE -c
 # environment
 MANPATH = :/home/linuxbrew/.linuxbrew/share/man
 # environment
@@ -151,7 +149,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = 5WhwO8iJekhcdZihAjSbT3jVPfv9GnQ0
+GITPOD_CLI_APITOKEN = Tgp4ftYBX71cOO6WGwzz-barxC7QbfgJ
 # automatic
 +F = $(notdir $+)
 # environment
@@ -159,7 +157,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = ws-a71a08bf-7ba9-4d7f-8997-4b560f14de93
+HOSTNAME = ws-d1331a2f-ea8a-438b-bf8b-feda3a388438
 # environment
 GRADLE_USER_HOME = /workspace/.gradle/
 # environment
@@ -178,14 +176,13 @@ IRBRC = /home/gitpod/.rvm/rubies/ruby-2.7.4/.irbrc
 SHLVL = 0
 # makefile (from 'Makefile', line 2)
 CC := gcc
-# makefile (from 'Makefile', line 22)
+# makefile (from 'Makefile', line 23)
 TARGET_NAME := secme
- 
 # environment
 GITPOD_GIT_USER_NAME = VladPetrovAlex
 # environment
 JAVA_HOME = /home/gitpod/.sdkman/candidates/java/current
-# makefile (from 'Makefile', line 27)
+# makefile (from 'Makefile', line 28)
 TARGET_DEBUG := debug/secme
 # default
 MAKE_VERSION := 4.2.1
@@ -196,14 +193,14 @@ USER = gitpod
 # environment
 GITPOD_EXTERNAL_EXTENSIONS = []
 # makefile (from 'Makefile', line 3)
-CCFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE
+CCFLAGS := -std=c11 -Wall -Wextra -Werror -Iinc -pthread -g -D_GNU_SOURCE -D_THREAD_SAFE
 # environment
 GOROOT = /home/gitpod/go
 # environment
 GITPOD_IDE_ALIAS = code
 # environment
 rvm_version = 1.29.12 (latest)
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 18)
 OBJ_PATH := obj
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -244,7 +241,6 @@ rvm_user_install_flag = 1
 # environment
 BROWSER = /ide/bin/helpers/browser.sh
 # environment
- 
 GITPOD_MEMORY = 2576
 # environment
 GITPOD_TASKS = [{"init":"make clean; make"}]
@@ -268,13 +264,13 @@ GP_EXTERNAL_BROWSER = /ide/bin/gitpod-code --openExternal
 SDKMAN_CANDIDATES_DIR = /home/gitpod/.sdkman/candidates
 # environment
 EDITOR = /ide/bin/gitpod-code
-# makefile (from 'Makefile', line 19)
+# makefile (from 'Makefile', line 20)
 DBG_PATH := debug
 # environment
 LC_ALL = C
 # environment
-GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"VladPetrovAlex/secme - main","ref":"main","refType":"branch","revision":"345e72ce47493fd961b56c20e38583c6e62ea237","repository":{"cloneUrl":"https://github.com/VladPetrovAlex/secme.git","host":"github.com","name":"secme","owner":"VladPetrovAlex","private":false},"normalizedContextURL":"https://github.com/VladPetrovAlex/secme","prebuildWorkspaceId":"ccd258b6-dcf5-4883-891e-957360b6b304","wasPrebuilt":true}
-# makefile (from 'Makefile', line 12)
+GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"VladPetrovAlex/secme - main","ref":"main","refType":"branch","revision":"af566d52b69116da0c4e94fc72883b25d82a85e3","repository":{"cloneUrl":"https://github.com/VladPetrovAlex/secme.git","host":"github.com","name":"secme","owner":"VladPetrovAlex","private":false},"normalizedContextURL":"https://github.com/VladPetrovAlex/secme","snapshotBucketId":"workspaces/emerald-meadowlark-yt23mksw/snapshot-1637338566412407365.tar@gitpod-prod-user-06334f1e-e009-40ae-828c-5c87a5f40abd","prebuildWorkspaceId":"785d5d4e-cbe4-4daf-9610-57b6a76fa686","wasPrebuilt":true}
+# makefile (from 'Makefile', line 13)
 DBGFLAGS := -g
 # environment
 JAVA_TOOL_OPTIONS = -Xmx2576m
@@ -283,6 +279,7 @@ JAVA_TOOL_OPTIONS = -Xmx2576m
 # environment
 rvm_prefix = /home/gitpod
 # default
+ 
 SUFFIXES := 
 # environment
 APACHE_DOCROOT_IN_REPO = public
@@ -292,18 +289,17 @@ PYENV_VIRTUALENV_INIT = 1
 NGINX_DOCROOT_IN_REPO = public
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
- 
 # environment
 VSCODE_INJECT_NODE_MODULE_LOOKUP_PATH = /ide/remote/node_modules
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = a71a08bf-7ba9-4d7f-8997-4b560f14de93
+GITPOD_INSTANCE_ID = d1331a2f-ea8a-438b-bf8b-feda3a388438
 # environment
-GITPOD_WORKSPACE_URL = https://cyan-echidna-xz0mjf7f.ws-eu18.gitpod.io
+GITPOD_WORKSPACE_URL = https://jade-sawfish-x9oxpzl4.ws-eu18.gitpod.io
 # default
 .RECIPEPREFIX := 
-# makefile (from 'Makefile', line 32)
+# makefile (from 'Makefile', line 33)
 OBJ_DEBUG := debug/secme.o debug/libcwrap.o
 # environment
 GITPOD_RESOLVED_EXTENSIONS = {"vscode.bat@1.44.2":{"fullPluginName":"vscode.bat@1.44.2","url":"local","kind":"builtin"},"vscode.clojure@1.44.2":{"fullPluginName":"vscode.clojure@1.44.2","url":"local","kind":"builtin"},"vscode.coffeescript@1.44.2":{"fullPluginName":"vscode.coffeescript@1.44.2","url":"local","kind":"builtin"},"vscode.cpp@1.44.2":{"fullPluginName":"vscode.cpp@1.44.2","url":"local","kind":"builtin"},"vscode.csharp@1.44.2":{"fullPluginName":"vscode.csharp@1.44.2","url":"local","kind":"builtin"},"llvm-vs-code-extensions.vscode-clangd@0.1.5":{"fullPluginName":"llvm-vs-code-extensions.vscode-clangd@0.1.5","url":"local","kind":"builtin"},"vscode.css@1.51.1":{"fullPluginName":"vscode.css@1.51.1","url":"local","kind":"builtin"},"vscode.css-language-features@1.51.1":{"fullPluginName":"vscode.css-language-features@1.51.1","url":"local","kind":"builtin"},"vscode.debug-auto-launch@1.44.2":{"fullPluginName":"vscode.debug-auto-launch@1.44.2","url":"local","kind":"builtin"},"vscode.emmet@1.44.2":{"fullPluginName":"vscode.emmet@1.44.2","url":"local","kind":"builtin"},"vscode.fsharp@1.44.2":{"fullPluginName":"vscode.fsharp@1.44.2","url":"local","kind":"builtin"},"vscode.go@1.44.2":{"fullPluginName":"vscode.go@1.44.2","url":"local","kind":"builtin"},"vscode.groovy@1.44.2":{"fullPluginName":"vscode.groovy@1.44.2","url":"local","kind":"builtin"},"vscode.handlebars@1.44.2":{"fullPluginName":"vscode.handlebars@1.44.2","url":"local","kind":"builtin"},"vscode.hlsl@1.44.2":{"fullPluginName":"vscode.hlsl@1.44.2","url":"local","kind":"builtin"},"vscode.html@1.51.1":{"fullPluginName":"vscode.html@1.51.1","url":"local","kind":"builtin"},"vscode.html-language-features@1.51.1":{"fullPluginName":"vscode.html-language-features@1.51.1","url":"local","kind":"builtin"},"vscode.ini@1.44.2":{"fullPluginName":"vscode.ini@1.44.2","url":"local","kind":"builtin"},"vscode.java@1.53.2":{"fullPluginName":"vscode.java@1.53.2","url":"local","kind":"builtin"},"vscode.javascript@1.44.2":{"fullPluginName":"vscode.javascript@1.44.2","url":"local","kind":"builtin"},"vscode.json@1.44.2":{"fullPluginName":"vscode.json@1.44.2","url":"local","kind":"builtin"},"vscode.json-language-features@1.46.1":{"fullPluginName":"vscode.json-language-features@1.46.1","url":"local","kind":"builtin"},"vscode.less@1.44.2":{"fullPluginName":"vscode.less@1.44.2","url":"local","kind":"builtin"},"vscode.log@1.44.2":{"fullPluginName":"vscode.log@1.44.2","url":"local","kind":"builtin"},"vscode.lua@1.44.2":{"fullPluginName":"vscode.lua@1.44.2","url":"local","kind":"builtin"},"vscode.make@1.44.2":{"fullPluginName":"vscode.make@1.44.2","url":"local","kind":"builtin"},"vscode.markdown@1.44.2":{"fullPluginName":"vscode.markdown@1.44.2","url":"local","kind":"builtin"},"vscode.npm@1.39.1":{"fullPluginName":"vscode.npm@1.39.1","url":"local","kind":"builtin"},"vscode.objective-c@1.44.2":{"fullPluginName":"vscode.objective-c@1.44.2","url":"local","kind":"builtin"},"vscode.perl@1.44.2":{"fullPluginName":"vscode.perl@1.44.2","url":"local","kind":"builtin"},"vscode.php@1.44.2":{"fullPluginName":"vscode.php@1.44.2","url":"local","kind":"builtin"},"vscode.powershell@1.44.2":{"fullPluginName":"vscode.powershell@1.44.2","url":"local","kind":"builtin"},"vscode.pug@1.44.2":{"fullPluginName":"vscode.pug@1.44.2","url":"local","kind":"builtin"},"vscode.python@1.47.3":{"fullPluginName":"vscode.python@1.47.3","url":"local","kind":"builtin"},"vscode.r@1.44.2":{"fullPluginName":"vscode.r@1.44.2","url":"local","kind":"builtin"},"vscode.razor@1.44.2":{"fullPluginName":"vscode.razor@1.44.2","url":"local","kind":"builtin"},"vscode.ruby@1.44.2":{"fullPluginName":"vscode.ruby@1.44.2","url":"local","kind":"builtin"},"vscode.rust@1.44.2":{"fullPluginName":"vscode.rust@1.44.2","url":"local","kind":"builtin"},"vscode.scss@1.44.2":{"fullPluginName":"vscode.scss@1.44.2","url":"local","kind":"builtin"},"vscode.shaderlab@1.44.2":{"fullPluginName":"vscode.shaderlab@1.44.2","url":"local","kind":"builtin"},"vscode.shellscript@1.44.2":{"fullPluginName":"vscode.shellscript@1.44.2","url":"local","kind":"builtin"},"vscode.sql@1.44.2":{"fullPluginName":"vscode.sql@1.44.2","url":"local","kind":"builtin"},"vscode.swift@1.44.2":{"fullPluginName":"vscode.swift@1.44.2","url":"local","kind":"builtin"},"vscode.typescript@1.44.2":{"fullPluginName":"vscode.typescript@1.44.2","url":"local","kind":"builtin"},"vscode.typescript-language-features@1.44.2":{"fullPluginName":"vscode.typescript-language-features@1.44.2","url":"local","kind":"builtin"},"vscode.vb@1.44.2":{"fullPluginName":"vscode.vb@1.44.2","url":"local","kind":"builtin"},"vscode.xml@1.44.2":{"fullPluginName":"vscode.xml@1.44.2","url":"local","kind":"builtin"},"vscode.yaml@1.44.2":{"fullPluginName":"vscode.yaml@1.44.2","url":"local","kind":"builtin"},"redhat.java@0.75.0":{"fullPluginName":"redhat.java@0.75.0","url":"local","kind":"builtin"},"vscjava.vscode-java-debug@0.27.1":{"fullPluginName":"vscjava.vscode-java-debug@0.27.1","url":"local","kind":"builtin"},"vscjava.vscode-java-dependency@0.18.0":{"fullPluginName":"vscjava.vscode-java-dependency@0.18.0","url":"local","kind":"builtin"},"ms-vscode.node-debug@1.38.4":{"fullPluginName":"ms-vscode.node-debug@1.38.4","url":"local","kind":"builtin"},"ms-vscode.node-debug2@1.33.0":{"fullPluginName":"ms-vscode.node-debug2@1.33.0","url":"local","kind":"builtin"},"ms-python.python@2020.7.96456":{"fullPluginName":"ms-python.python@2020.7.96456","url":"local","kind":"builtin"},"golang.Go@0.14.4":{"fullPluginName":"golang.go@0.14.4","url":"local","kind":"builtin"},"redhat.vscode-xml@0.11.0":{"fullPluginName":"redhat.vscode-xml@0.11.0","url":"local","kind":"builtin"},"redhat.vscode-yaml@0.8.0":{"fullPluginName":"redhat.vscode-yaml@0.8.0","url":"local","kind":"builtin"},"bmewburn.vscode-intelephense-client@1.4.0":{"fullPluginName":"bmewburn.vscode-intelephense-client@1.4.0","url":"local","kind":"builtin"},"felixfbecker.php-debug@1.13.0":{"fullPluginName":"felixfbecker.php-debug@1.13.0","url":"local","kind":"builtin"},"rust-lang.rust@0.7.8":{"fullPluginName":"rust-lang.rust@0.7.8","url":"local","kind":"builtin"},"vscode.theme-abyss@1.44.2":{"fullPluginName":"vscode.theme-abyss@1.44.2","url":"local","kind":"builtin"},"vscode.theme-kimbie-dark@1.44.2":{"fullPluginName":"vscode.theme-kimbie-dark@1.44.2","url":"local","kind":"builtin"},"vscode.theme-monokai@1.44.2":{"fullPluginName":"vscode.theme-monokai@1.44.2","url":"local","kind":"builtin"},"vscode.theme-monokai-dimmed@1.44.2":{"fullPluginName":"vscode.theme-monokai-dimmed@1.44.2","url":"local","kind":"builtin"},"vscode.theme-quietlight@1.44.2":{"fullPluginName":"vscode.theme-quietlight@1.44.2","url":"local","kind":"builtin"},"vscode.theme-red@1.44.2":{"fullPluginName":"vscode.theme-red@1.44.2","url":"local","kind":"builtin"},"vscode.theme-solarized-dark@1.44.2":{"fullPluginName":"vscode.theme-solarized-dark@1.44.2","url":"local","kind":"builtin"},"vscode.theme-solarized-light@1.44.2":{"fullPluginName":"vscode.theme-solarized-light@1.44.2","url":"local","kind":"builtin"},"vscode.theme-tomorrow-night-blue@1.44.2":{"fullPluginName":"vscode.theme-tomorrow-night-blue@1.44.2","url":"local","kind":"builtin"},"vscode.vscode-theme-seti@1.44.2":{"fullPluginName":"vscode.vscode-theme-seti@1.44.2","url":"local","kind":"builtin"},"vscode.merge-conflict@1.44.2":{"fullPluginName":"vscode.merge-conflict@1.44.2","url":"local","kind":"builtin"},"ms-vscode.references-view@0.0.47":{"fullPluginName":"ms-vscode.references-view@0.0.47","url":"local","kind":"builtin"},"EditorConfig.EditorConfig@0.15.1":{"fullPluginName":"editorconfig.editorconfig@0.15.1","url":"local","kind":"builtin"},"vscode.docker@1.47.3":{"fullPluginName":"vscode.docker@1.47.3","url":"local","kind":"builtin"}}
@@ -313,12 +309,12 @@ LANG = C
 PYTHONUSERBASE = /workspace/.pip-modules
 # environment
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
-# makefile (from 'Makefile', line 35)
+# makefile (from 'Makefile', line 36)
 DISTCLEAN_LIST := obj/secme.o obj/libcwrap.o debug/secme.o debug/libcwrap.o
 # environment
 MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.4
 # variable set hash-table stats:
-# Load=151/1024=15%, Rehash=0, Collisions=16/202=8%
+# Load=151/1024=15%, Rehash=0, Collisions=17/207=8%
 
 # Pattern-specific Variable Values
 
@@ -326,20 +322,19 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.4
 
 # Directories
 
-# . (device 2346, inode 4026765371): 14 files, no impossibilities.
-# src (device 2346, inode 2282323996): 4 files, no impossibilities.
+# . (device 2346, inode 269088781): 14 files, no impossibilities.
+# src (device 2346, inode 3355721819): 4 files, no impossibilities.
 
 # 18 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c*
-#  recipe to execute (from 'Makefile', line 46):
+#  recipe to execute (from 'Makefile', line 47):
 	 $(CC) $(CCOBJFLAGS) -o $@ $<
 
 debug/%.o: src/%.c*
- 
-#  recipe to execute (from 'Makefile', line 47):
+#  recipe to execute (from 'Makefile', line 48):
 	 $(CC) $(CCOBJFLAGS) $(DBGFLAGS) -o $@ $<
 
 # 2 implicit rules, 0 (0.0%) terminal.
@@ -352,14 +347,9 @@ all: bin/secme
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/libcwrap.c:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-19 13:51:22.848491323
-#  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 .PHONY: makedir all debug clean distclean
 #  Implicit rule search has not been done.
@@ -371,21 +361,23 @@ distclean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 64):
+#  recipe to execute (from 'Makefile', line 65):
 	 @echo CLEAN $(DISTCLEAN_LIST); rm -f $(DISTCLEAN_LIST)
 
 bin/secme: obj/secme.o obj/libcwrap.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-19 13:51:24.032570552
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 45):
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 46):
 	 $(CC) $(CCFLAGS) -o $@ $(OBJ)
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-19 13:51:22.848491323
+#  Last modified 2021-11-19 16:16:01
 #  File has been updated.
 #  Successfully updated.
 
@@ -399,9 +391,8 @@ debug/secme: debug/secme.o debug/libcwrap.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 48):
+#  recipe to execute (from 'Makefile', line 49):
 	 $(CC) $(CCFLAGS) $(DBGFLAGS) $(OBJ_DEBUG) -o $@
- 
 
 default: makedir all
 #  Implicit rule search has not been done.
@@ -428,10 +419,11 @@ debug/libcwrap.o:
 
 makedir:
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 52):
+#  recipe to execute (from 'Makefile', line 53):
 	 @mkdir -p $(BIN_PATH) $(OBJ_PATH) $(DBG_PATH)
 
 clean:
@@ -439,50 +431,63 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 62):
 	 @echo CLEAN $(CLEAN_LIST); rm -f $(CLEAN_LIST)
 
 obj/secme.o: src/secme.c
- 
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'secme'
-#  Last modified 2021-11-19 13:51:23.96856627
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 46):
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/secme.o
+# automatic
+# % := 
+# automatic
+# * := secme
+# automatic
+# + := src/secme.c
+# automatic
+# | := 
+# automatic
+# < := src/secme.c
+# automatic
+# ^ := src/secme.c
+# automatic
+# ? := src/secme.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'Makefile', line 47):
 	 $(CC) $(CCOBJFLAGS) -o $@ $<
 
-obj/libcwrap.o: src/libcwrap.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'libcwrap'
-#  Last modified 2021-11-19 13:51:24.004568679
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 46):
-	 $(CC) $(CCOBJFLAGS) -o $@ $<
+# Not a target:
+obj/libcwrap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/secme.c:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-19 13:51:22.848491323
+#  Last modified 2021-11-19 16:16:01
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/56=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/52=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 39 / storage = 356 B / avg = 9 B
-# current buf: size = 8162 B / used = 356 B / count = 39 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 332 B / avg = 8 B
+# current buf: size = 8162 B / used = 332 B / count = 37 / avg = 8 B
 
-# strcache performance: lookups = 77 / hit rate = 49%
+# strcache performance: lookups = 74 / hit rate = 50%
 # hash-table stats:
- 
-# Load=39/8192=0%, Rehash=0, Collisions=2/77=3%
-# Finished Make data base on Fri Nov 19 13:51:31 2021
+# Load=37/8192=0%, Rehash=0, Collisions=2/74=3%
+# Finished Make data base on Mon Nov 22 06:43:39 2021
 
  

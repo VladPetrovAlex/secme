@@ -49,6 +49,9 @@ core.*
 *.dcoder_run
 .dcoder_run
 
+# VS Code
+.vscode
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
