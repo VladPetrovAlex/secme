@@ -55,7 +55,7 @@ void destroy_awaiter(struct awaiter *a)
     free(a->evc);
 }
 
-int awaint(struct awaiter *a)
+int await(struct awaiter *a)
 {
     int handle = a->evh;
     size_t  count = (size_t)a->evc;
@@ -69,6 +69,9 @@ int awaint(struct awaiter *a)
     }
 
     return 0;
+
+epw_fail:
+    return -1;
 }
 
 int make_worker(struct worker *w, void *(*work)(void *))
