@@ -12,7 +12,7 @@ struct list_item
 };
 
 #define list_foreach(p, t, it) \
-for(t *it = container_of(p->next, t, it); \
+for(t *it = container_of(atomic_load(&p->next), t, it); \
        it->it.next != (p)->next; it->it = *it->it.next)
 
 void list_init(struct list_item *list)
